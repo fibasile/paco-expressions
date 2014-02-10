@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>Export Paco Expressions</_name>
+    <id>org.inkscape.output.paco-express</id>
+    <dependency type="extension">org.inkscape.output.svg.inkscape</dependency>
+    <dependency type="executable" location="extensions">paco-express.py</dependency>
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+    <param name="tab" type="notebook">
+          <page name="Exporter" _gui_text="Exporter">
+            <param name="directory" type="string" _gui-text="Directory">/tmp/</param>
+            <param name="size_width" type="string" _gui-text="Width">128</param>
+            <param name="size_height" type="string" _gui-text="Height">64</param>
+            <param name="overwrite" type="boolean" _gui-text="Overwrite existing exports">true</param>
+          </page>
+          <page name="desc" _gui-text="Help">
+            <_param name="ExporterHelp" type="description">This effect generates xbm bitmaps (actually C files) each containing one layer from the starting file, except the one named frame. See the provided template file faces.svg for an example. 
+            </_param>
+          </page>
+    </param>
+    <effect needs-live-preview="false">
+          <object-type>all</object-type>
+          <effects-menu>
+            <submenu _name="Web"/>
+          </effects-menu>
+        </effect>
+
+        <script>
+          <command reldir="extensions" interpreter="python">paco-express.py</command>
+        </script>
+    </inkscape-extension>  
