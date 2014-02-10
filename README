@@ -1,0 +1,19 @@
+PACO Expression editor
+
+
+This is an Inkscape extension allowing to produce XBM bitmaps suitable to be displayed on an e-ink or lcd screen
+driven by a micro-controller.
+
+Dependencies
+------------
+
+For running this extension you need a recent version of Inkscape and Imagemagick
+
+You also need the Python Wand module (optional)
+
+Configuration
+-------------
+
+Please also edit the paco-expression.py file to suit paths in your system.
+You can disable the Wand module setting USE_WAND=False in the first lines.
+
